@@ -1,0 +1,78 @@
+/* Customizações por cima do Bootstrap: só o que as classes utilitárias não cobrem */
+:root {
+  --cor-dourado: #c9a24a;
+  --cor-dourado-escuro: #a9832f;
+  --cor-escuro: #1c1a17;
+  --cor-creme: #f4efe6;
+  --bs-font-sans-serif: "Montserrat", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+}
+
+html {
+  scroll-padding-top: 4.5rem; /* compensa a navbar fixa ao clicar nos links do menu */
+}
+
+.titulo-display {
+  font-family: "Playfair Display", Georgia, serif;
+}
+
+.text-dourado {
+  color: var(--cor-dourado) !important;
+}
+
+.bg-escuro {
+  background-color: var(--cor-escuro) !important;
+}
+
+.bg-creme {
+  background-color: var(--cor-creme) !important;
+}
+
+/* Botão dourado no padrão dos botões do Bootstrap */
+.btn-dourado {
+  --bs-btn-color: #1c1a17;
+  --bs-btn-bg: var(--cor-dourado);
+  --bs-btn-border-color: var(--cor-dourado);
+  --bs-btn-hover-color: #1c1a17;
+  --bs-btn-hover-bg: var(--cor-dourado-escuro);
+  --bs-btn-hover-border-color: var(--cor-dourado-escuro);
+  --bs-btn-active-bg: var(--cor-dourado-escuro);
+  font-weight: 600;
+}
+
+/* Banner com a ilustração de fundo */
+.hero {
+  min-height: min(100vh, 48rem);
+  background: url("../img/hero.svg") center / cover no-repeat;
+}
+
+/* Ícone redondo dos cards de serviço */
+.icone-servico {
+  width: 4rem;
+  height: 4rem;
+  font-size: 1.8rem;
+}
+
+.card-servico {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-servico:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 1rem 2rem rgba(28, 26, 23, 0.15) !important;
+}
+
+/* Carousel de depoimentos: setas e indicadores escuros sobre o fundo claro */
+.depoimentos .carousel-control-prev-icon,
+.depoimentos .carousel-control-next-icon {
+  filter: invert(1);
+}
+
+.depoimentos .carousel-indicators [data-bs-target] {
+  background-color: var(--cor-escuro);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card-servico {
+    transition: none;
+  }
+}
